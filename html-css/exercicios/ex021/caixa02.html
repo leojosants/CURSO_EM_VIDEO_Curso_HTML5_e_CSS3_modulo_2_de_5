@@ -4,75 +4,101 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       
-        <title>Modelo de Caixas</title>
+
+        <title>Grouping Tags</title>
 
         <style>
-            h1 {
-                background-color: lightgray;
-                height: 300px;
-                width: 300px;
-
-                /* 
-                    border-width: 10px;
-                    border-style: solid;
-                    border-color: darkgray; 
-                */
-                border: 10px solid darkgray;
-            
-                /* 
-                    padding-top: 10px;
-                    padding-right: 10px;
-                    padding-bottom: 10px;
-                    padding-left: 10px; 
-                */
-                /* padding: 10px 10px 10px 10px; */
-                padding: 10px; 
-
-                /* 
-                    margin-top: 20px;
-                    margin-right: 20px;
-                    margin-bottom: 40px;
-                    margin-left: 20px; 
-                */
-                margin: 20px auto 40px auto;
-
-                /* 
-                    outline-width: 5px;
-                    outline-style: dashed;
-                    outline-color: salmon; 
-                */
-                outline: 5px dashed salmon;
+            body {
+                 font-family: Arial, Helvetica, sans-serif;
+                 background-color: dimgray;
+                 margin: 0px;
             }
 
-            a {
-                /* 
-                    border-width: 10px;
-                    border-style: solid;
-                    border-color: red; 
-                */
-                border: 10px solid red;
+            header {
+                background-color: white;
+                padding: 10px;
+                margin: 10px;
+            }
 
-                /* 
-                    padding-top: 10px;
-                    padding-right: 10px;
-                    padding-bottom: 10px;
-                    padding-left: 10px; 
-                */
-                /* padding: 10px 10px 10px 10px; */
-                padding: 10px; 
+            nav {
+                background-color: rgb(19, 145, 194);
+                padding: 3px;
+            }
+
+            nav > a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                margin-right: 30px;
+            }
+
+            nav > a:hover {
+                text-decoration: underline;
+            }
+
+            main {
+                background-color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            article {
+                background-color: lightgray;
+                padding: 5px;
+            }
+
+            article > aside {
+                background-color: rgb(165, 165, 165);
+            }
+
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 1px;
+                margin: 0px;
             }
         </style>
     </head>
     <body>
-        <h1>Exemplo de caixa box-level</h1>
+        <header>
+            <h1>Meu site</h1>
 
-        <p>
-            Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.
-        </p>
+            <nav>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+                <a href="#">Link</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="assuntos">
+                <p>Área da section</p>
+            </section>
+
+            <section id="noticias">
+                <article>
+                    <h2>Título da seção de notícias</h2>
+
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit veniam recusandae aut iste dolor beatae delectus, dolorem, possimus odit voluptatem ex, harum sequi quam assumenda quis incidunt? Ullam, possimus laudantium.
+                    </p>
+
+                    <aside>
+                        <p>Artigo escrito por...</p>
+                    </aside>
+                </article>
+
+                <article>
+                    <p>Área da article</p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvido por Leonardo Santos</p>
+        </footer>
     </body>
 </html>
-
-<!-- 
-    user agente é o navegador
--->
